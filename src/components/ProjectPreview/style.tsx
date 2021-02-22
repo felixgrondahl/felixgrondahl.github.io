@@ -6,6 +6,7 @@ export const ProjectWrapper = styled.div`
   height: 250px;
   width: 100%;
   margin-bottom: 40px;
+  cursor: pointer;
 `;
 
 export const ContentWrapper = styled.div`

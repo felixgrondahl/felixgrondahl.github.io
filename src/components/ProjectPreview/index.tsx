@@ -1,9 +1,9 @@
 import React from "react";
 import { ProjectWrapper, ProjectText, ProjectImg, ProjectTitle, ContentWrapper } from "./style";
 
-const ProjectPreview = ({ image, title, text }: { image: string; title: string; text: string }) => {
+const ProjectPreview = ({ image, title, text, onClick }: { image: string; title: string; text: string; onClick: Function }) => {
   return (
-    <ProjectWrapper>
+    <ProjectWrapper onClick={() => onClick()}>
       <ContentWrapper>
         <ProjectImg imgSource={image} />
         <ProjectText>

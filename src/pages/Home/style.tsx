@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Title = styled.h1`
-  position: absolute;
+  position: relative;
   text-align: center;
   top: calc(50% - 56px / 2 - 75px);
   left: 50%;
