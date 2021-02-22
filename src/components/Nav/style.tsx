@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { StyledLink } from "../../globalStyles/link-styles";
+import { StyledLink } from "globalStyles/link-styles";
 
 export const NavWrapper = styled.nav`
   position: relative;

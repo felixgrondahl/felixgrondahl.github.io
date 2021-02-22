@@ -11,6 +11,7 @@ import GlobalStyle from "../../globalStyles/global-styles";
 import Nav from "../Nav";
 import Footer from "../Footer";
 import PgronGallery from "../../pages/Projects/ProjectPages/Websites/PgronGallery";
+import ProjectsNav from "components/Project/ProjectsNav";
 
 function App() {
   const location = useLocation();
@@ -32,13 +33,14 @@ function App() {
         <AnimatedRoutes key={key} style={props}>
           <Switch location={location}>
             <Route path="/" exact component={Home} />
-            <Route path="/projects" exact component={Projects} />
-            <Route path="/projects/pgrongallery" component={PgronGallery} />
+            <Route path="/projects/websites" exact component={Projects} />
+            <Route path="/projects/websites/pgrongallery" component={PgronGallery} />
             <Route path="/resume" component={Resume} />
           </Switch>
         </AnimatedRoutes>
       ))}
       <Nav />
+      <ProjectsNav show={matchPath(location.pathname, "/projects") ? true : false}/>
       <Background grow={matchPath(location.pathname, "/projects") ? true : false} />
       <Footer />
     </div>
