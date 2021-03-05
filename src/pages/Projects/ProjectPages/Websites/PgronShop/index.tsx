@@ -7,14 +7,14 @@ import MainImage from "assets/images/PgronGallery/PgronGalleryMain.jpg";
 import TechList from "components/TechList";
 import { pgronGalleryTech } from "utils/techLists";
 
-const ProjectPage = () => {
+const PgronShop = () => {
   return (
       <MidWrapper>
         <S.ProjectWrapper>
           <S.ProjectBody>
             <S.ProjectImage src={HeaderImage} />
             <div>
-              <ProjectTitle text={`Peter Grondahl Gallery`} />
+              <ProjectTitle text={`PGRON SHOP`} />
 
               <TechList>{pgronGalleryTech}</TechList>
               <S.ProjectText>
@@ -31,4 +31,4 @@ Nunc vestibulum placerat ipsum. Sed et suscipit mi. In lectus erat, aliquet quis
   );
 };
 
-export default ProjectPage;
+export default PgronShop;

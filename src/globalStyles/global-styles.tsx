@@ -20,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
         color: white;
         font-weight: 300;
         letter-spacing: 0.075em;
+        margin-top: 6px;
     }
 
     h1 {

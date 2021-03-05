@@ -1,16 +1,32 @@
 import React from "react";
 import { Wrapper, Circle, BackgroundSvg } from "./style";
-import { useSpring, config } from "react-spring";
+import { useSpring, config, interpolate, animated } from "react-spring";
 
-const Background = ({ grow }: { grow: boolean }) => {
-  const smallGrowSpring = useSpring({ transform: grow ? "scale(1.9)" : "scale(1)", config: { mass: 2, tension: 300 } });
-  const largeGrowSpring = useSpring({ transform: grow ? "scale(1.9)" : "scale(1)", config: { mass: 2, tension: 200 } });
-  const opacityOutSpring = useSpring({ opacity: grow ? 0 : 1, config: {tension: grow ? 500 : 10, mass: grow ? 1 : 2} });
-  
+// const Background = ({ grow, growBigger }: { grow: boolean, growBigger: boolean }) => {
+//   const smallGrowSpring = useSpring({ transform: grow ? "scale(1.9)" : "scale(1)", config: { mass: 2, tension: 300 } });
+//   const largeGrowSpring = useSpring({ transform: grow ? "scale(1.9)" : "scale(1)", config: { mass: 2, tension: 200 } });
+//   const opacityOutSpring = useSpring({ opacity: grow ? 0 : 1, config: {tension: grow ? 500 : 10, mass: grow ? 1 : 2} });
+const Background = ({ scale, color }: { scale: number; color: string }) => {
+  const smallGrowSpring = useSpring({ transform: `scale(${scale})`, config: { mass: 2, tension: 300 } });
+  const largeGrowSpring = useSpring({ transform: `scale(${scale})`, config: { mass: 2, tension: 200 } });
+  const colorSpring = useSpring({color: color});
+
+  let grow = scale > 1;
+  const opacityOutSpring = useSpring({
+    opacity: grow ? 0 : 1,
+    config: { tension: grow ? 500 : 10, mass: grow ? 1 : 2 },
+  });
+
   return (
     <Wrapper>
       <BackgroundSvg width="1627" height="1080" viewBox="0 0 1627 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <Circle cx="813.5" cy="534.5" r="813.5" fill="url(#paint0_linear)" style={{...largeGrowSpring, mixBlendMode: "multiply" }} />
+        <Circle
+          cx="813.5"
+          cy="534.5"
+          r="813.5"
+          fill="url(#paint0_linear)"
+          style={{ ...largeGrowSpring, mixBlendMode: "multiply" }}
+        />
         <Circle
           id="centerCircle1"
           cx="813.5"
@@ -57,7 +73,8 @@ const Background = ({ grow }: { grow: boolean }) => {
             gradientUnits="userSpaceOnUse"
             gradientTransform="translate(814 157) rotate(90) scale(654)"
           >
-            <stop stopColor="#2FC4F3" />
+            {/* <stop stopColor="#2FC4F3" /> */}
+            <animated.stop stopColor={colorSpring.color} />
             <stop offset="1" stopColor="#790B25" stopOpacity="0" />
           </radialGradient>
         </defs>

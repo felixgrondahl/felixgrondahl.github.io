@@ -3,37 +3,32 @@ import styled from "styled-components";
 export const ProjectWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  height: 250px;
+  height: 320px;
   width: 100%;
   margin-bottom: 40px;
   cursor: pointer;
 `;
 
 export const ContentWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 100%;
+  display: grid;
+  grid-template-columns: 4fr 4.5fr;
+  grid-template-rows: auto;
+  gap: 30px;
+  width: 80%;
   height: 100%;
+  margin: auto;
 `;
 
 export const ProjectImg = styled.div<{ imgSource: string }>`
-  width: 35%;
   height: 100%;
   background-image: ${(props) => `url(${props.imgSource})`};
   background-position: center;
   background-size: cover;
   border-radius: 5px;
-  margin-right: 20px;
 `;
 
 export const ProjectText = styled.div`
-  width: 48%;
   height: 100%;
-
-  p {
-    padding-left: 20px;
-    margin-top: 6px;
-  }
 `;
 
 export const ProjectTitle = styled.h2`
