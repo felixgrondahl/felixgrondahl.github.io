@@ -16,11 +16,16 @@ const GlobalStyle = createGlobalStyle`
         width: 100vw;
     }
 
+    a {
+        color: #49bf9d;
+    }
+
     p {
         color: white;
         font-weight: 300;
         letter-spacing: 0.075em;
         margin-top: 6px;
+        line-height: 1.45em;
     }
 
     h1 {
@@ -35,7 +40,7 @@ const GlobalStyle = createGlobalStyle`
         font-size: 2rem;
         font-weight: 300;
         margin: 0;
-        letter-spacing: 0.075em;
+        letter-spacing: 0.16em;
     }
 `;
 

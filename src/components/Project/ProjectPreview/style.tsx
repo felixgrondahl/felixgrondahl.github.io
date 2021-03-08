@@ -29,6 +29,11 @@ export const ProjectImg = styled.div<{ imgSource: string }>`
 
 export const ProjectText = styled.div`
   height: 100%;
+  p {
+    line-height: 1.5em;
+    font-size: 1.1em;
+    letter-spacing: 0.085em;
+  }
 `;
 
 export const ProjectTitle = styled.h2`

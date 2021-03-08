@@ -5,11 +5,13 @@ export const MidWrapper = styled.div`
   background-color: rgba(0, 0, 0, 0.48);
   border-radius: 10px;
   max-width: 1500px;
-  height: 75vh;
+  height: 80vh;
   top: 50%;
   transform: translateY(-50%);
   margin: auto;
-  padding-top: 40px;
+  padding: 40px 0px;
+  box-sizing: border-box;
+  /* padding-top: 40px; */
   overflow: auto;
 
   scrollbar-width: thin;
