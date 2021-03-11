@@ -9,6 +9,7 @@ import HeaderVideo from "assets/images/Tube/intro.mp4";
 import RunVideo from "assets/images/Tube/run.mp4";
 import IdleVideo from "assets/images/Tube/idle.mp4";
 import MapGenVideo from "assets/images/Tube/mapgen.mp4";
+import ProjectLinks from "components/Project/ProjectLinks";
 
 const Tube = () => {
   return (
@@ -21,7 +22,9 @@ const Tube = () => {
 
           <div>
             <ProjectTitle text={`TUBE`} />
+            <h3>Programming / Animation</h3>
             <S.ProjectHeaderText>{`Tube is an FPS Horror game where your goal is to get to the end of the generated level, fighting through enemies, and eating donuts along the way.`}</S.ProjectHeaderText>
+            <ProjectLinks github={""} website={"https://helmetbox.itch.io/tube"}/>
             <TechList>{TubeTech}</TechList>
             <S.ProjectText>
               <span>{`TUBE is a game where I wanted to put my knowledge to the test. I knew I wanted to include some kind of procedurally generated levels as well as procedural animation. While I had done both of these types of work separately before, the challenge here was to implement these in a short timeframe of a couple of weeks to fit the scope of the game.`}</span>

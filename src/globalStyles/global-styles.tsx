@@ -42,6 +42,15 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         letter-spacing: 0.16em;
     }
+
+    h3 {
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 300;
+        margin: 0px;
+        margin-bottom: 4px;
+        letter-spacing: 0.2em;
+    }
 `;
 
 export default GlobalStyle;

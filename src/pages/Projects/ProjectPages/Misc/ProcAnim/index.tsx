@@ -15,12 +15,11 @@ const ProcAnim = () => {
           <S.ProjectVideo src={HeaderVideo} itemType="video/mp4" loop autoPlay muted half={false} />
           <div>
             <ProjectTitle text={`Procedural Animation`} />
+            <h3>Sole Developer</h3>
             <S.ProjectHeaderText>{`Using Unity and machine learning to generate a self balancing walking biped.`}</S.ProjectHeaderText>
             <TechList>{ProceduralAnimTech}</TechList>
             <S.ProjectText>
               <span>{`Every joint has a scalar value for every axis it can rotate about, in the beginning, all of these scalars are set to high values, forcing the biped to fulfill the desired movement but for it to look more natural each scalar would have to be tweaked separately. The most painless way to do this is by using a Machine Learning algorithm.`}</span>
-              {/* <span>{`In id bibendum arcu, at pretium dolor. Nunc placerat pulvinar diam, quis hendrerit purus iaculis id. Nulla sed lobortis orci, nec fringilla tellus. Ut accumsan quam eget accumsan varius. Fusce ac ante vitae libero lacinia pretium.
-Nunc vestibulum placerat ipsum. Sed et suscipit mi. In lectus erat, aliquet quis vestibulum id, viverra id ante. Duis faucibus eu libero vel sagittis. Nunc ullamcorper eu ipsum vulputate consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in tortor imperdiet, feugiat leo sed, mattis elit. Curabitur ac aliquam lacus.`}</span> */}
             </S.ProjectText>
           </div>
           <S.ProjectText>

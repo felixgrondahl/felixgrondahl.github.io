@@ -40,3 +40,7 @@ export const ProjectTitle = styled.h2`
   display: inline-block;
   padding-left: 5px;
 `;
+
+export const ProjectRole = styled.h3`
+
+`;

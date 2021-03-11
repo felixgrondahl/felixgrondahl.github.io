@@ -24,7 +24,7 @@ export const ProjectHeaderText = styled.p`
   font-weight: 300;
   font-size: 1.1em;
   letter-spacing: 0.085em;
-  margin: 5px 0px 20px 0px;
+  margin: 5px 0px 10px 0px;
 `;
 
 export const ProjectText = styled.p`
@@ -65,4 +65,20 @@ export const VideoContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+`;
+
+export const ProjectLinkWrapper = styled.div`
+  width: 400px;
+  height: 35px;
+  line-height:35px;
+  display: flex;
+  align-items: center;
+
+  a:nth-child(2) {
+    margin-left: 40px;
+  }
+`;
+
+export const ProjectLink = styled.a`
+  
 `;

@@ -7,6 +7,7 @@ import MainImageLeft from "assets/images/PgronShop/pgronshop-mmain.jpg";
 import MainImageRight from "assets/images/PgronShop/pgronshop-m-gallery.jpg";
 import TechList from "components/TechList";
 import { pgronShopTech } from "utils/techLists";
+import ProjectLinks from "components/Project/ProjectLinks";
 
 const PgronShop = () => {
   return (
@@ -16,15 +17,20 @@ const PgronShop = () => {
           <S.ProjectImage src={HeaderImage} />
           <div>
             <ProjectTitle text={`PGRON SHOP`} />
-
+            <h3>Sole Developer</h3>
+            <S.ProjectHeaderText>{`Tube is an FPS Horror game where your goal is to get to the end of the generated level, fighting through enemies, and eating donuts along the way.`}</S.ProjectHeaderText>
+            <ProjectLinks github={""} website={"https://pgronshop.netlify.app/"}/>
             <TechList>{pgronShopTech}</TechList>
             <S.ProjectText>
-              <span>{`Pellentesque fermentum gravida magna non ultricies. Sed vestibulum arcu ut eros imperdiet, id interdum turpis viverra. Curabitur dignissim ultrices ante sed posuere. Pellentesque eu pellentesque erat. Nunc pulvinar viverra arcu sed accumsan. Maecenas id libero augue. Nulla ac egestas lectus.`}</span>
-              <span>{`In id bibendum arcu, at pretium dolor. Nunc placerat pulvinar diam, quis hendrerit purus iaculis id. Nulla sed lobortis orci, nec fringilla tellus. Ut accumsan quam eget accumsan varius. Fusce ac ante vitae libero lacinia pretium.
-Nunc vestibulum placerat ipsum. Sed et suscipit mi. In lectus erat, aliquet quis vestibulum id, viverra id ante. Duis faucibus eu libero vel sagittis. Nunc ullamcorper eu ipsum vulputate consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in tortor imperdiet, feugiat leo sed, mattis elit. Curabitur ac aliquam lacus.`}</span>
+              <span>{`	For PGRON SHOP I wanted to create a very lightweight and fast webshop.
+	Being used to working in REACT, Nextjs with server side rendering felt like the obvious choice.
+	Knowing that the shop would only be updated once every other day, I knew that I could simply fetch all products on the backend during build time
+	and render everything on the backend.
+	For the shopping cart system I just saved the customers cart to a cookie that the customer would send to the backend, and the backend would respond with the respeective product data.`}</span>
+              <span>{`For the payment system I implemented stripe checkout making sure to handle all payment details on the backend.`}</span>
             </S.ProjectText>
           </div>
-          <S.ProjectText>{`Pellentesque fermentum gravida magna non ultricies. Sed vestibulum arcu ut eros imperdiet, id interdum turpis viverra. Curabitur dignissim ultrices ante sed posuere. Pellentesque eu pellentesque erat. Nunc pulvinar viverra arcu sed accumsan. Maecenas id libero augue. Nulla ac egestas lectus.`}</S.ProjectText>
+          <S.ProjectText>{`With the mobile version of the site I wanted to create something that feelt like it was made for mobile, not just a "mobile version".`}</S.ProjectText>
           <S.ImageContainer>
             <S.ProjectHalfImage src={MainImageLeft} />
             <S.ProjectHalfImage src={MainImageRight} />
