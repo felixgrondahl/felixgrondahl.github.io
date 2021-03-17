@@ -41,7 +41,6 @@ function App() {
             <Route path="/projects/games" exact component={Games} />
             <Route path="/projects/misc" exact component={Misc} />
 
-
             <Route path="/projects/websites/pgrongallery" component={PgronGallery} />
             <Route path="/projects/websites/pgronshop" component={PgronShop} />
 
@@ -55,7 +54,6 @@ function App() {
         </AnimatedRoutes>
       ))}
       <Nav projects={matchPath(location.pathname, "/projects") ? true : false} />
-
       {/* The background ball's scale and color needs to be set based on what path we are in. */}
       <Background
         scale={
@@ -69,10 +67,15 @@ function App() {
             : 1
         }
         color={
-          matchPath(location.pathname, { path: ["/projects/websites/:projid", "/projects/games/:projid", "/projects/misc/:projid"], exact: true }) ? "#D6AA68" : "#2FC4F3"
+          matchPath(location.pathname, {
+            path: ["/projects/websites/:projid", "/projects/games/:projid", "/projects/misc/:projid"],
+            exact: true,
+          })
+            ? "#D6AA68"
+            : "#2FC4F3"
         }
       />
-      <Footer />
+      <Footer projects={matchPath(location.pathname, "/projects") ? true : false}/>
     </div>
   );
 }

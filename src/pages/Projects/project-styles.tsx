@@ -1,12 +1,11 @@
 import styled from "styled-components";
-// import { isPropertySignature } from "typescript";
+import { device } from "globalStyles/breakpoints";
 
 export const ProjectBackground = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: -1;
-  /* background-color: rgba(0, 0, 0, 0.5); */
 `;
 
 export const ProjectWrapper = styled.div``;
@@ -18,6 +17,14 @@ export const ProjectBody = styled.div`
   gap: 40px;
   width: 80%;
   margin: auto;
+
+  @media ${device.tablet} {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-x: hidden;
+    padding-bottom: 20px;
+  }
 `;
 
 export const ProjectHeaderText = styled.p`
@@ -25,6 +32,11 @@ export const ProjectHeaderText = styled.p`
   font-size: 1.1em;
   letter-spacing: 0.085em;
   margin: 5px 0px 10px 0px;
+
+  @media ${device.tablet} {
+    font-size: 1em;
+    font-weight: 400;
+  }
 `;
 
 export const ProjectText = styled.p`
@@ -52,10 +64,9 @@ export const ImageContainer = styled.div`
   justify-content: space-between;
 `;
 
-export const ProjectVideo = styled.video<{half: boolean}>`
+export const ProjectVideo = styled.video<{ half: boolean }>`
   position: relative;
-  /* height: 100%; */
-  max-width: ${props => props.half ? "45%" : "100%"};
+  max-width: ${(props) => (props.half ? "45%" : "100%")};
   object-fit: contain;
   display: inline-block;
   border-radius: 5px;
@@ -70,7 +81,7 @@ export const VideoContainer = styled.div`
 export const ProjectLinkWrapper = styled.div`
   width: 400px;
   height: 35px;
-  line-height:35px;
+  line-height: 35px;
   display: flex;
   align-items: center;
 
@@ -79,6 +90,4 @@ export const ProjectLinkWrapper = styled.div`
   }
 `;
 
-export const ProjectLink = styled.a`
-  
-`;
+export const ProjectLink = styled.a``;

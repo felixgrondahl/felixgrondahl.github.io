@@ -14,7 +14,7 @@ const Misc = () => {
         image={Header}
         title={"Procedural Animation"}
         role={"Sole Developer"}
-        text={`Pellentesque fermentum gravida magna non ultricies. Sed vestibulum arcu ut eros imperdiet, id interdum turpis viverra. Curabitur dignissim ultrices ante sed posuere. Pellentesque eu pellentesque erat. Nunc pulvinar viverra arcu sed accumsan. Maecenas id libero augue. Nulla ac egestas lectus.`}
+        text={`Using Unity and machine learning to generate a self balancing walking biped.`}
         techIcons={ProceduralAnimTech}
         onClick={() => history.push("/projects/misc/proceduralanimation")}
       />

@@ -17,7 +17,7 @@ const BirdGame = () => {
           <div>
             <ProjectTitle text={`Bird Game`} />
             <h3>Sole Developer</h3>
-            <S.ProjectHeaderText>{`Tube is an FPS Horror game where your goal is to get to the end of the generated level, fighting through enemies, and eating donuts along the way.`}</S.ProjectHeaderText>
+            <S.ProjectHeaderText>{`A Flappy Bird clone create with PixiJS.`}</S.ProjectHeaderText>
             <ProjectLinks github={"https://github.com/felixgrondahl/birdclone"} website={""}/>
             <TechList>{BirdTech}</TechList>
             <S.ProjectText>

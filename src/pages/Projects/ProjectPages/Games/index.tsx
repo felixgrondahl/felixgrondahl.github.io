@@ -23,7 +23,7 @@ const Games = () => {
         image={BirdImage}
         title={"Bird Game"}
         role={"Sole Developer"}
-        text={`In id bibendum arcu, at pretium dolor. Nunc placerat pulvinar diam, quis hendrerit purus iaculis id. Nulla sed lobortis orci, nec fringilla tellus. Ut accumsan quam eget accumsan varius. Fusce ac ante vitae libero lacinia pretium. Nunc vestibulum placerat ipsum. Sed et suscipit mi. In lectus erat, aliquet quis vestibulum id, viverra id ante. Duis faucibus eu libero vel sagittis.`}
+        text={`A Flappy Bird clone create with PixiJS.`}
         techIcons={BirdTech}
         onClick={() => history.push("/projects/games/bird")}
       />

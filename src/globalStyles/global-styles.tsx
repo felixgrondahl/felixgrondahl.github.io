@@ -33,6 +33,11 @@ const GlobalStyle = createGlobalStyle`
         font-size: 3em;
         font-weight: 200;
         letter-spacing: 0.14em;
+
+        @media (max-width: 768px) {
+            font-size: 1.9em;
+            letter-spacing: 0.25em;
+        }
     }
 
     h2 {
@@ -41,6 +46,11 @@ const GlobalStyle = createGlobalStyle`
         font-weight: 300;
         margin: 0;
         letter-spacing: 0.16em;
+
+        @media (max-width: 768px) {
+            font-size: 1.1em;
+            letter-spacing: 0.1em;
+        }
     }
 
     h3 {
@@ -50,6 +60,11 @@ const GlobalStyle = createGlobalStyle`
         margin: 0px;
         margin-bottom: 4px;
         letter-spacing: 0.2em;
+        
+        @media (max-width: 768px) {
+            font-size: 1em;
+            letter-spacing: 0.1em;
+        }
     }
 `;
 

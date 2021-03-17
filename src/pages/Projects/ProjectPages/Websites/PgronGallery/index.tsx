@@ -18,7 +18,7 @@ const ProjectPage = () => {
           <div>
             <ProjectTitle text={`Peter Grondahl Gallery`} />
             <h3>Sole Developer</h3>
-            <S.ProjectHeaderText>{`Tube is an FPS Horror game where your goal is to get to the end of the generated level, fighting through enemies, and eating donuts along the way.`}</S.ProjectHeaderText>
+            <S.ProjectHeaderText>{`A minimalistic art gallery page for Peter Gröndahl created with React.`}</S.ProjectHeaderText>
             <ProjectLinks github={""} website={"https://www.pgron.com/"} />
 
             <TechList>{pgronGalleryTech}</TechList>

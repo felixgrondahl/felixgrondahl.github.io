@@ -1,11 +1,7 @@
 import React from "react";
 import { Wrapper, Circle, BackgroundSvg } from "./style";
-import { useSpring, config, interpolate, animated } from "react-spring";
+import { useSpring, config, animated } from "react-spring";
 
-// const Background = ({ grow, growBigger }: { grow: boolean, growBigger: boolean }) => {
-//   const smallGrowSpring = useSpring({ transform: grow ? "scale(1.9)" : "scale(1)", config: { mass: 2, tension: 300 } });
-//   const largeGrowSpring = useSpring({ transform: grow ? "scale(1.9)" : "scale(1)", config: { mass: 2, tension: 200 } });
-//   const opacityOutSpring = useSpring({ opacity: grow ? 0 : 1, config: {tension: grow ? 500 : 10, mass: grow ? 1 : 2} });
 const Background = ({ scale, color }: { scale: number; color: string }) => {
   const smallGrowSpring = useSpring({ transform: `scale(${scale})`, config: { mass: 2, tension: 300 } });
   const largeGrowSpring = useSpring({ transform: `scale(${scale})`, config: { mass: 2, tension: 200 } });
@@ -73,7 +69,6 @@ const Background = ({ scale, color }: { scale: number; color: string }) => {
             gradientUnits="userSpaceOnUse"
             gradientTransform="translate(814 157) rotate(90) scale(654)"
           >
-            {/* <stop stopColor="#2FC4F3" /> */}
             <animated.stop stopColor={colorSpring.color} />
             <stop offset="1" stopColor="#790B25" stopOpacity="0" />
           </radialGradient>

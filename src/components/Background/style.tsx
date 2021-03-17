@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { animated } from "react-spring";
+import { device } from "globalStyles/breakpoints";
 
 export const Wrapper = styled.div`
   position: fixed;
@@ -9,6 +10,14 @@ export const Wrapper = styled.div`
   left: 0;
   z-index: -1;
   background-color: #1d1741;
+
+  @media ${device.tablet} {
+    width: 240%;
+    height: 240%;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 `;
 
 export const BackgroundSvg = styled.svg`

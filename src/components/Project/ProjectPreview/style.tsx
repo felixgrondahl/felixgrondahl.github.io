@@ -1,12 +1,16 @@
 import styled from "styled-components";
+import { device } from "globalStyles/breakpoints";
 
 export const ProjectWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
   height: 320px;
   width: 100%;
   margin-bottom: 40px;
   cursor: pointer;
+
+  @media ${device.tablet} {
+    margin-bottom: 0px;
+
+  }
 `;
 
 export const ContentWrapper = styled.div`
@@ -17,6 +21,14 @@ export const ContentWrapper = styled.div`
   width: 80%;
   height: 100%;
   margin: auto;
+
+  @media ${device.tablet} {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0px;
+    width: 93%;
+  }
 `;
 
 export const ProjectImg = styled.div<{ imgSource: string }>`
@@ -33,6 +45,14 @@ export const ProjectText = styled.div`
     line-height: 1.5em;
     font-size: 1.1em;
     letter-spacing: 0.085em;
+    text-overflow: ellipsis;
+
+    @media ${device.tablet} {
+      font-size: 1em;
+      letter-spacing: 0.055em;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      padding-bottom: 5px;
+    }
   }
 `;
 
@@ -41,6 +61,4 @@ export const ProjectTitle = styled.h2`
   padding-left: 5px;
 `;
 
-export const ProjectRole = styled.h3`
-
-`;
+export const ProjectRole = styled.h3``;

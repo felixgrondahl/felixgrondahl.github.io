@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { StyledLink } from "globalStyles/link-styles";
 import { animated } from "react-spring";
+import { device } from "globalStyles/breakpoints";
 
 export const NavWrapper = styled.nav`
   position: relative;
@@ -13,6 +14,10 @@ export const NavWrapper = styled.nav`
   padding-top: 40px;
   z-index: 999;
   font-size: 1.6rem;
+
+  @media ${device.tablet} {
+    display: none;
+  }
 `;
 
 export const NavLink = styled(StyledLink)`
@@ -22,9 +27,7 @@ export const NavLink = styled(StyledLink)`
   text-align: center;
 `;
 
-export const ProjectWrapper = styled.div`
-
-`;
+export const ProjectWrapper = styled.div``;
 
 export const ProjectNav = styled(animated.div)`
   font-size: 1.2rem;
