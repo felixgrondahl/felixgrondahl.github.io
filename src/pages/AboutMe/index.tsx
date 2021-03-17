@@ -1,10 +1,12 @@
 import React from "react";
 import { MidWrapper } from "globalStyles/wrappers";
 import MeImage from "assets/images/headshotsmall.png";
-import { ProfileImg, TextWrapper } from "./style";
+import { ProfileImg, TextWrapper, MobileHeader } from "./style";
 
 const AboutMe = () => {
   return (
+    <>
+    <MobileHeader>ABOUT ME</MobileHeader>
     <MidWrapper>
       <ProfileImg style={{ backgroundImage: `url(${MeImage})` }} />
       <TextWrapper>
@@ -16,6 +18,7 @@ const AboutMe = () => {
         </p>
       </TextWrapper>
     </MidWrapper>
+    </>
   );
 };
 

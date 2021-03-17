@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { ShowPanelButton, Panel } from "./style";
+import { ShowPanelButton, Panel, Wrapper } from "./style";
 import { ReactComponent as MobileMenu } from "assets/icons/mobile-menu.svg";
 import Footer from "components/Footer";
 
@@ -9,7 +9,7 @@ const SidePanel = () => {
   const history = useHistory();
 
   return (
-    <div>
+    <Wrapper>
       <ShowPanelButton className={`${open ? "buttonOpen" : "buttonClosed"}`} onClick={() => setOpen((v) => !v)}>
         <MobileMenu />
       </ShowPanelButton>
@@ -17,15 +17,15 @@ const SidePanel = () => {
       <Panel className={open ? "open" : "closed"}>
         {/* <div className={styled.background}></div> */}
         <div className="foreground">
-          <button onClick={() => history.push("/")}>
+          <button onClick={() => {history.push("/"); setOpen((v) => !v);}}>
             <p>HOME</p>
           </button>
 
-          <button onClick={() => history.push("/projects/websites")}>
+          <button onClick={() => {history.push("/projects/websites"); setOpen((v) => !v);}}>
             <p>PROJECTS</p>
           </button>
 
-          <button onClick={() => history.push("/about")}>
+          <button onClick={() => {history.push("/about"); setOpen((v) => !v);}}>
             <p>ABOUT ME</p>
           </button>
 
@@ -42,7 +42,7 @@ const SidePanel = () => {
           </div>
         </div>
       </Panel>
-    </div>
+    </Wrapper>
   );
 };
 

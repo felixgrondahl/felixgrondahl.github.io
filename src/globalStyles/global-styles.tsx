@@ -20,6 +20,10 @@ const GlobalStyle = createGlobalStyle`
         color: #49bf9d;
     }
 
+    button:focus {
+        outline: 1px solid white;
+    }
+
     p {
         color: white;
         font-weight: 300;

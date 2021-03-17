@@ -1,11 +1,20 @@
 import styled from "styled-components";
+import { device } from "globalStyles/breakpoints";
+
+export const Wrapper = styled.div`
+  display: none;
+
+  @media ${device.tablet} {
+    display: initial;
+  }
+`;
 
 export const ShowPanelButton = styled.button`
   position: absolute;
   background: rgba(0, 0, 0, 0);
   z-index: 1001;
   border: none;
-  padding: 0;
+  padding: 5px;
   margin: 15px 20px 0 20px;
 
   rect {
@@ -14,7 +23,7 @@ export const ShowPanelButton = styled.button`
 
   &.buttonOpen {
     svg {
-      #top { 
+      #top {
         transform: rotateZ(-45deg) translateY(12px);
       }
       #middle {
@@ -44,7 +53,7 @@ export const ShowPanelButton = styled.button`
 `;
 
 export const Panel = styled.div`
-  transition: left 0.15s;
+  transition: left 0.3s ease-in-out;
   position: absolute;
   width: 100vw;
   height: 100vh;
@@ -52,7 +61,7 @@ export const Panel = styled.div`
 
   &.closed {
     position: absolute;
-    left: -100vw;
+    left: -101vw;
   }
 
   &.open {

@@ -75,7 +75,7 @@ function App() {
             : "#2FC4F3"
         }
       />
-      <Footer projects={matchPath(location.pathname, "/projects") ? true : false}/>
+      <Footer projects={matchPath(location.pathname, {path: ["/projects", "/about"]}) ? true : false}/>
     </div>
   );
 }

@@ -25,9 +25,6 @@ const Nav = ({ projects }: { projects: boolean }) => {
       </NavWrapper>
 
       <SidePanel />
-      {/* <MobileSideMenuNav>
-        <MobileMenu />
-      </MobileSideMenuNav> */}
 
       <MobileProjectsNav show={projects}>
         <h2>PROJECTS</h2>
