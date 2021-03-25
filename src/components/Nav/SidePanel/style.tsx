@@ -15,7 +15,11 @@ export const ShowPanelButton = styled.button`
   z-index: 1001;
   border: none;
   padding: 5px;
-  margin: 15px 20px 0 20px;
+  margin: 10px 15px 0 15px;
+
+  @media ${device.mobileS} {
+    margin: 5px 5px 0 5px;
+  }
 
   rect {
     transition: transform 0.3s ease-in-out;
@@ -84,7 +88,7 @@ export const Panel = styled.div`
     padding-top: 100px;
     box-sizing: border-box;
 
-    button {
+    a {
       position: relative;
       border: none;
       width: 100%;

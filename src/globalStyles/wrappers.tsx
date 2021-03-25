@@ -3,16 +3,17 @@ import { device } from "globalStyles/breakpoints";
 
 export const MidWrapper = styled.div`
   position: relative;
-  background-color: rgba(0, 0, 0, 0.48);
+  background: radial-gradient(59.59% 100% at 50% 0%, rgba(53, 146, 191, 0.9) 30.73%, rgba(48, 43, 79, 0.9) 100%);
   border-radius: 10px;
   max-width: 1500px;
-  height: 80vh;
-  top: 10vh;
+  height: 79vh;
+  top: 100px;
   /* transform: translateY(-50%); */
   margin: auto;
   padding: 40px 0px;
   box-sizing: border-box;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 
   scrollbar-width: thin;
   scrollbar-color: #cacaca #0a0a0a;
@@ -32,8 +33,16 @@ export const MidWrapper = styled.div`
     border: 3px solid #0a0a0a; /* creates padding around scroll thumb */
   }
 
+  @media (max-height: 900px) {
+    height: 75vh;
+  }
+
+  @media (max-height: 600px) {
+    height: 60vh;
+  }
+
   @media ${device.tablet} {
-    /* height: auto; */
+    height: 75vh;
     top: 130px;
     /* margin-top: 40%; */
     /* top: 20%; */

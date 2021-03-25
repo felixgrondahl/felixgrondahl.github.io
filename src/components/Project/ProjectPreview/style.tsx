@@ -3,13 +3,23 @@ import { device } from "globalStyles/breakpoints";
 
 export const ProjectWrapper = styled.div`
   height: 320px;
-  width: 100%;
+  width: 80%;
+  margin: auto;
   margin-bottom: 40px;
   cursor: pointer;
 
+  background: linear-gradient(
+      262.3deg,
+      rgba(3, 2, 6, 0) -26.69%,
+      rgba(255, 255, 255, 0.17) 17.54%,
+      rgba(0, 0, 0, 0) 54.96%
+    ),
+    linear-gradient(0deg, #000000, #000000);
+  box-shadow: 13px 11px 16px -6px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+
   @media ${device.tablet} {
     margin-bottom: 0px;
-
   }
 `;
 
@@ -22,12 +32,22 @@ export const ContentWrapper = styled.div`
   height: 100%;
   margin: auto;
 
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+  &:hover {
+    .projectImg {
+      transform: scale(1.025);
+    }
+  }
+
   @media ${device.tablet} {
     display: flex;
     flex-direction: column;
 
     gap: 0px;
     width: 93%;
+    border-bottom: none;
   }
 `;
 
@@ -37,6 +57,8 @@ export const ProjectImg = styled.div<{ imgSource: string }>`
   background-position: center;
   background-size: cover;
   border-radius: 5px;
+
+  transition: transform 0.2s ease-in-out;
 `;
 
 export const ProjectText = styled.div`

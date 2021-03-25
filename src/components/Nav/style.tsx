@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { StyledLink } from "globalStyles/link-styles";
+// import { StyledLink } from "globalStyles/link-styles";
 import { animated } from "react-spring";
 import { device } from "globalStyles/breakpoints";
 
@@ -18,13 +18,6 @@ export const NavWrapper = styled.nav`
   @media ${device.tablet} {
     display: none;
   }
-`;
-
-export const NavLink = styled(StyledLink)`
-  font-size: inherit;
-  font-weight: 300;
-  width: 150px;
-  text-align: center;
 `;
 
 export const ProjectWrapper = styled.div``;

@@ -23,20 +23,15 @@ const ProjectPage = () => {
 
             <TechList>{pgronGalleryTech}</TechList>
             <S.ProjectText>
-              <span>{`I was asked to create a gallery page for the artist Peter Gröndahl.
-              I wanted to use REACT to create a Single page application.`}</span>
+              {/* <span>{`an exclusive gallery page for the artist Peter Gröndahl created in React.`}</span> */}
 
-              <span>{`I did not want the design to be overly ambitious since this would be an art page, I did not want the design to seep into and affect the art itself.
-              thus I chose an minimalistic but exclusive design.
-              Since I wanted to create a SPA REACT felt like the obvious choice with its virtual DOM, also since REACT uses a compnent based design stucture,
-	            I felt like I could easily wrap my head arount it coming from Unity (witch also uses component based design).`}</span>
+              <span>{`I knew I wanted to use React to create a Single Page Application (SPA) but I also had to make sure the design would not be too ambitious, I did not want the design to seep into and influence the art on the page.`}</span>
 
-              <span>{`I made sure to cache all data when the user enters the website to prevent waiting for multiple fetch calls evey time the user changes Route.
-              While I still wanted a minimalistic design with animated transitions,
-              I didn't want the user to feel intimidated by complex UI/UX and tried to keep the UX as familiar as possible. This also makes it easy to adapt to all different kinds of screen resolutions.`}</span>
+              <span>{`Since this would be a SPA where its core functionality is the image gallery, to prevent slow browsing, I made sure to cache all data when the user enters the website to prevent the user waiting through multiple fetch calls every time the user clicks an artwork.`}</span>
+              <span>{`With the UI/UX I didn't want the user to feel intimidated by complex and abstract ideas, that alot of art gallery sites suffers from, and tried to keep the UX as familiar as possible. This also makes it easier for the site to be accessible for most devices.`}</span>
             </S.ProjectText>
           </div>
-          <S.ProjectText>{`Creating the mobile version I didn't want it too feel like the mobile version is just the widescreen website crammed into a smaller display,
+          <S.ProjectText>{`Building the mobile version I didn't want it too feel like the mobile version is just the widescreen website crammed into a smaller display,
 	            so I wanted to create big easy buttons to navigate with, and a more custom tailored re-design to fit the mobile UX.`}</S.ProjectText>
           <S.ProjectImage src={MainImage} />
         </S.ProjectBody>

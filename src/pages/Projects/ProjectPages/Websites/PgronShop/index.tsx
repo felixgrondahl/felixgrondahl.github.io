@@ -19,18 +19,21 @@ const PgronShop = () => {
             <ProjectTitle text={`PGRON SHOP`} />
             <h3>Sole Developer</h3>
             <S.ProjectHeaderText>{`PGRON SHOP is a lightweight serverside rendered webshop created with NextJs.`}</S.ProjectHeaderText>
-            <ProjectLinks github={""} website={"https://pgronshop.netlify.app/"}/>
+            <ProjectLinks github={""} website={"https://pgronshop.netlify.app/"} />
             <TechList>{pgronShopTech}</TechList>
             <S.ProjectText>
-              <span>{`	For PGRON SHOP I wanted to create a very lightweight and fast webshop.
-	Being used to working in REACT, Nextjs with server side rendering felt like the obvious choice.
-	Knowing that the shop would only be updated once every other day, I knew that I could simply fetch all products on the backend during build time
-	and render everything on the backend.
-	For the shopping cart system I just saved the customers cart to a cookie that the customer would send to the backend, and the backend would respond with the respeective product data.`}</span>
-              <span>{`For the payment system I implemented stripe checkout making sure to handle all payment details on the backend.`}</span>
+              <span>{`With PGRON SHOP I was asked to create a lightweight and fast webshop.
+	Having worked with REACT in the past, NextJS with server side rendering felt like the obvious choice.`}</span>
+              <span>{`With the shopping cart I just made sure to save the customers cart data to a cookie, this cookie would then be send to the backend when the user needs to see updated cart info, this will then allow the backend to render the needed elements and return the updated static site to the user.`}</span>
             </S.ProjectText>
           </div>
-          <S.ProjectText>{`With the mobile version of the site I wanted to create something that feelt like it was made for mobile, not just a "mobile version".`}</S.ProjectText>
+          <S.ProjectText>
+            <span>
+              {`When it came to adapting the page to mobile devices,
+              I wanted to create something that feelt like it was made for mobile. Too often do I see mobile adapted pages with very small buttons and crammed UI's,
+              So I wanted to make sure the UI/UX made sense and felt natural on mobile.`}
+            </span>
+          </S.ProjectText>
           <S.ImageContainer>
             <S.ProjectHalfImage src={MainImageLeft} />
             <S.ProjectHalfImage src={MainImageRight} />

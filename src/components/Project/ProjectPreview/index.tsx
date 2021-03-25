@@ -21,13 +21,18 @@ const ProjectPreview = ({
   return (
     <ProjectWrapper onClick={() => onClick()}>
       <ContentWrapper>
-        <ProjectImg imgSource={image} />
+        <div style={{ height: "100%", overflow: "hidden" }}>
+          <ProjectImg imgSource={image} className="projectImg" />
+        </div>
         <ProjectText>
           <ProjectTitle text={title} />
-            <ProjectRole>{role}</ProjectRole>
-            <TechUsed>{techIcons}</TechUsed>
-            <p>{text}</p>
-
+          <ProjectRole>{role}</ProjectRole>
+          <TechUsed>
+            {techIcons.map((element, index) => (
+              <React.Fragment key={index}>{element}</React.Fragment>
+            ))}
+          </TechUsed>
+          <p>{text}</p>
         </ProjectText>
       </ContentWrapper>
     </ProjectWrapper>

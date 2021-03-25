@@ -1,7 +1,12 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-export const StyledLink = styled(Link)`
+export const StyledNavLink = styled(NavLink)`
+  font-size: inherit;
+  font-weight: 300;
+  width: 150px;
+  text-align: center;
+
   color: white;
   text-decoration: none;
 
@@ -15,6 +20,10 @@ export const StyledLink = styled(Link)`
   }
 
   &:hover {
-      color: #dddddd;
+    color: #dddddd;
+  }
+
+  &.active {
+    font-weight: 500;
   }
 `;

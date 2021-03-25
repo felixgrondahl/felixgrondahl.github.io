@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { StyledLink } from "globalStyles/link-styles";
 import { device } from "globalStyles/breakpoints";
+import { StyledNavLink } from "globalStyles/link-styles";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -19,9 +19,10 @@ export const Wrapper = styled.div`
 export const Title = styled.h1`
   position: relative;
   text-align: center;
-  top: calc(50% - 56px / 2 - 75px);
+  top: 39%;
   left: 50%;
   transform: translate(-50%, -50%);
+  letter-spacing: 0.25em;
 
   @media ${device.tablet} {
     top: initial;
@@ -34,7 +35,7 @@ export const Title = styled.h1`
   }
 
   span {
-    letter-spacing: 0.12em;
+    letter-spacing: 0.25em;
     font-size: 1rem;
     font-weight: 300;
 
@@ -60,7 +61,7 @@ export const MobileLinkWrapper = styled.div`
   }
 `;
 
-export const MobileLink = styled(StyledLink)`
+export const MobileLink = styled(StyledNavLink)`
   font-size: 1.3em;
   letter-spacing: 0.4em;
   font-weight: 400;

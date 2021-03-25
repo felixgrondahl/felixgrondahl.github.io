@@ -1,27 +1,32 @@
 import React from "react";
-import { NavWrapper, NavLink, ProjectNav } from "./style";
+import { NavWrapper, ProjectNav } from "./style";
 import { MobileProjectsNav } from "./mobileStyle";
 import { useSpring } from "react-spring";
 import SidePanel from "./SidePanel";
+import { StyledNavLink } from "globalStyles/link-styles";
+import { matchPath } from "react-router";
+import { useLocation } from "react-router-dom";
 // import { ReactComponent as MobileMenu } from "assets/icons/mobile-menu.svg";
 
 const Nav = ({ projects }: { projects: boolean }) => {
+  const location = useLocation();
+  // console.log(location.pathname);
   const showProjectsSpring = useSpring({ width: projects ? "300px" : "0px" });
   return (
     <>
       <NavWrapper>
-        <NavLink to={"/"}>Home</NavLink>
+        <StyledNavLink exact activeClassName="active" to={"/"}>Home</StyledNavLink>
 
         <div>
-          <NavLink to={"/projects/websites"}>Projects</NavLink>
+          <StyledNavLink isActive={() => matchPath(location.pathname, "/projects") ? true : false} to={"/projects/websites"}>Projects</StyledNavLink>
           <ProjectNav style={showProjectsSpring}>
-            <NavLink to={"/projects/websites"}>Websites</NavLink>
-            <NavLink to={"/projects/games"}>Games</NavLink>
-            <NavLink to={"/projects/misc"}>Misc</NavLink>
+            <StyledNavLink to={"/projects/websites"}>Websites</StyledNavLink>
+            <StyledNavLink to={"/projects/games"}>Games</StyledNavLink>
+            <StyledNavLink to={"/projects/misc"}>Misc</StyledNavLink>
           </ProjectNav>
         </div>
 
-        <NavLink to={"/about"}>About Me</NavLink>
+        <StyledNavLink to={"/about"}>About Me</StyledNavLink>
       </NavWrapper>
 
       <SidePanel />
@@ -29,9 +34,9 @@ const Nav = ({ projects }: { projects: boolean }) => {
       <MobileProjectsNav show={projects}>
         <h2>PROJECTS</h2>
         <div>
-          <NavLink to={"/projects/websites"}>Websites</NavLink>
-          <NavLink to={"/projects/games"}>Games</NavLink>
-          <NavLink to={"/projects/misc"}>Misc</NavLink>
+          <StyledNavLink to={"/projects/websites"}>Websites</StyledNavLink>
+          <StyledNavLink to={"/projects/games"}>Games</StyledNavLink>
+          <StyledNavLink to={"/projects/misc"}>Misc</StyledNavLink>
         </div>
       </MobileProjectsNav>
     </>

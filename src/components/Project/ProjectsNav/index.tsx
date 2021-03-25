@@ -1,13 +1,13 @@
 import React from "react";
 import { Wrapper } from "./style";
-import { NavLink } from "components/Nav/style";
+import { StyledNavLink } from "globalStyles/link-styles";
 
 const ProjectsNav = ({ show }: { show: boolean }) => {
   return (
     <Wrapper display={show}>
-      <NavLink to={"/projects/websites"}>Websites</NavLink>
-      <NavLink to={"/projects/games"}>Games</NavLink>
-      <NavLink to={"/projects/misc"}>Misc</NavLink>
+      <StyledNavLink to={"/projects/websites"}>Websites</StyledNavLink>
+      <StyledNavLink to={"/projects/games"}>Games</StyledNavLink>
+      <StyledNavLink to={"/projects/misc"}>Misc</StyledNavLink>
     </Wrapper>
   );
 };
