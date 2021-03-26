@@ -19,7 +19,7 @@ const Nav = ({ projects }: { projects: boolean }) => {
 
         <div>
           <StyledNavLink isActive={() => matchPath(location.pathname, "/projects") ? true : false} to={"/projects/websites"}>Projects</StyledNavLink>
-          <ProjectNav style={showProjectsSpring}>
+          <ProjectNav style={{...showProjectsSpring}}>
             <StyledNavLink to={"/projects/websites"}>Websites</StyledNavLink>
             <StyledNavLink to={"/projects/games"}>Games</StyledNavLink>
             <StyledNavLink to={"/projects/misc"}>Misc</StyledNavLink>

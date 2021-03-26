@@ -47,9 +47,9 @@ const GlobalStyle = createGlobalStyle`
     h2 {
         color: white;
         font-size: 2rem;
-        font-weight: 300;
+        font-weight: 400;
         margin: 0;
-        letter-spacing: 0.16em;
+        letter-spacing: 0.1em;
 
         @media (max-width: 768px) {
             font-size: 1.1em;
