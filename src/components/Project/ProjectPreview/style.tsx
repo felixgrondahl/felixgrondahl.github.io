@@ -3,25 +3,23 @@ import { device } from "globalStyles/breakpoints";
 import { animated } from "react-spring";
 
 export const ProjectWrapper = styled(animated.div)`
+  cursor: pointer;
   height: 320px;
   width: 80%;
   margin: auto;
   margin-bottom: 40px;
-  cursor: pointer;
+
   border-radius: 5px;
 
-  /* background: linear-gradient(
-      262.3deg,
-      rgba(3, 2, 6, 0) -26.69%,
-      rgba(255, 255, 255, 0.17) 17.54%,
-      rgba(0, 0, 0, 0) 54.96%
-    ),
-    linear-gradient(0deg, #000000, #000000); */
-  box-shadow: 13px 11px 16px -6px rgba(0, 0, 0, 0.25);
-  /* border-radius: 5px; */
+  &:last-child {
+    margin-bottom: 0px;
+  }
 
   @media ${device.tablet} {
-    margin-bottom: 0px;
+    /* margin-bottom: 0px; */
+    padding-top: 10px;
+    width: 90%;
+    margin-bottom: 10px;
   }
 `;
 
@@ -39,12 +37,15 @@ export const ContentWrapper = styled.div`
   height: 100%;
   margin: auto;
 
-  padding-bottom: 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 13px 11px 16px -6px rgba(0, 0, 0, 0.25);
 
   &:hover {
     .projectImg {
       transform: scale(1.025);
+    }
+
+    .moreInfo {
+      opacity: 1;
     }
   }
 
@@ -69,7 +70,8 @@ export const ProjectImg = styled.div<{ imgSource: string }>`
 `;
 
 export const ProjectText = styled.div`
-  padding: 20px 0;
+  position: relative;
+  padding: 20px 20px 20px 0;
 
   p {
     line-height: 1.5em;
@@ -83,6 +85,32 @@ export const ProjectText = styled.div`
       border-bottom: 1px solid rgba(255, 255, 255, 0.2);
       padding-bottom: 5px;
     }
+  }
+
+  @media ${device.tablet} {
+    padding-right: 0;
+  }
+`;
+
+export const MoreInfo = styled.div`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  opacity: 0.8;
+  padding: 23px 30px;
+
+  p {
+    display: inline-block;
+    margin: 0;
+    line-height: 100%;
+    letter-spacing: 0.1em;
+    padding-right: 8px;
+  }
+
+  @media ${device.tablet} {
+    display: none;
   }
 `;
 

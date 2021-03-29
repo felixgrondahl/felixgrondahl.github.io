@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { device } from "globalStyles/breakpoints";
 
 const GlobalStyle = createGlobalStyle`
     * {
@@ -38,7 +39,7 @@ const GlobalStyle = createGlobalStyle`
         font-weight: 200;
         letter-spacing: 0.14em;
 
-        @media (max-width: 768px) {
+        @media ${device.tablet} {
             font-size: 1.9em;
             letter-spacing: 0.25em;
         }
@@ -51,7 +52,12 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         letter-spacing: 0.1em;
 
-        @media (max-width: 768px) {
+        @media ${device.laptop} {
+            font-size: 1.5em;
+            letter-spacing: 0.1em;
+        }
+
+        @media ${device.tablet} {
             font-size: 1.1em;
             letter-spacing: 0.1em;
         }
@@ -65,7 +71,7 @@ const GlobalStyle = createGlobalStyle`
         margin-bottom: 4px;
         letter-spacing: 0.2em;
         
-        @media (max-width: 768px) {
+        @media ${device.tablet} {
             font-size: 1em;
             letter-spacing: 0.1em;
         }

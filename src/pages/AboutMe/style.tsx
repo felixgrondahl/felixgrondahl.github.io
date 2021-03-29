@@ -1,5 +1,10 @@
 import styled from "styled-components";
 import { device } from "globalStyles/breakpoints";
+import { MidWrapper } from "globalStyles/wrappers";
+
+export const AboutWrapper = styled(MidWrapper)`
+  background: radial-gradient(100% 100% at 50% 0%, #373737 0%, #000000 100%);
+`;
 
 export const MobileHeader = styled.h2`
   display: none;
@@ -41,12 +46,14 @@ export const TextWrapper = styled.div`
     text-align: center;
 
     @media ${device.tablet} {
-    font-size: 1.3rem;
-    font-weight: 400;
-  }
+      font-size: 1.3rem;
+      font-weight: 400;
+    }
   }
 
   p {
+    line-height: 1.3em;
+    font-size: 1.1em;
     span {
       display: block;
       margin-bottom: 20px;

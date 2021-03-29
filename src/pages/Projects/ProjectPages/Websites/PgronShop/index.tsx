@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "pages/Projects/project-styles";
-import { MidWrapper } from "globalStyles/wrappers";
+import { ProjectMidWrapper } from "globalStyles/wrappers";
 import ProjectTitle from "components/Project/ProjectTitle";
 import HeaderImage from "assets/images/PgronShop/pgronshop-main.jpg";
 import MainImageLeft from "assets/images/PgronShop/pgronshop-mmain.jpg";
@@ -11,16 +11,20 @@ import ProjectLinks from "components/Project/ProjectLinks";
 
 const PgronShop = () => {
   return (
-    <MidWrapper>
+    <ProjectMidWrapper>
       <S.ProjectWrapper>
         <S.ProjectBody>
           <S.ProjectImage src={HeaderImage} />
           <div>
             <ProjectTitle text={`PGRON SHOP`} />
+            <TechList
+              fitContent={false}
+              icons={pgronShopTech}
+              websites={<ProjectLinks github={""} website={"https://pgronshop.netlify.app/"} />}
+            />
             <h3>Sole Developer</h3>
             <S.ProjectHeaderText>{`PGRON SHOP is a lightweight serverside rendered webshop created with NextJs.`}</S.ProjectHeaderText>
-            <ProjectLinks github={""} website={"https://pgronshop.netlify.app/"} />
-            <TechList>{pgronShopTech}</TechList>
+
             <S.ProjectText>
               <span>{`With PGRON SHOP I was asked to create a lightweight and fast webshop.
 	Having worked with REACT in the past, NextJS with server side rendering felt like the obvious choice.`}</span>
@@ -40,7 +44,7 @@ const PgronShop = () => {
           </S.ImageContainer>
         </S.ProjectBody>
       </S.ProjectWrapper>
-    </MidWrapper>
+    </ProjectMidWrapper>
   );
 };
 

@@ -6,14 +6,15 @@ export const MidWrapper = styled.div`
   background: radial-gradient(59.59% 100% at 50% 0%, rgba(53, 146, 191, 0.9) 30.73%, rgba(48, 43, 79, 0.9) 100%);
   border-radius: 10px;
   max-width: 1500px;
-  height: 79vh;
+  height: calc(100vh - 180px);
   top: 100px;
-  /* transform: translateY(-50%); */
   margin: auto;
   padding: 40px 0px;
   box-sizing: border-box;
   overflow-y: auto;
   overflow-x: hidden;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
   scrollbar-width: thin;
   scrollbar-color: #cacaca #0a0a0a;
@@ -34,24 +35,21 @@ export const MidWrapper = styled.div`
   }
 
   @media (max-height: 900px) {
-    height: 75vh;
-  }
-
-  @media (max-height: 600px) {
-    height: 60vh;
+    height: calc(100vh - 170px);
   }
 
   @media ${device.tablet} {
-    height: 75vh;
+    height: calc(100vh - 150px);
     top: 130px;
-    /* margin-top: 40%; */
-    /* top: 20%; */
     transform: none;
     padding: 15px 0px;
 
     &::-webkit-scrollbar {
-    width: 7px; /* width of the entire scrollbar */
+      width: 7px; /* width of the entire scrollbar */
+    }
   }
+`;
 
-  }
+export const ProjectMidWrapper = styled(MidWrapper)`
+  background: radial-gradient(100% 100% at 50% 0%, #373737 0%, #000000 100%);
 `;

@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "pages/Projects/project-styles";
-import { MidWrapper } from "globalStyles/wrappers";
+import { ProjectMidWrapper } from "globalStyles/wrappers";
 import ProjectTitle from "components/Project/ProjectTitle";
 import HeaderImage from "assets/images/BirdGame/birdHeader.jpg";
 import gameplayVideo from "assets/images/BirdGame/birdclone-ingame.mp4";
@@ -10,16 +10,22 @@ import ProjectLinks from "components/Project/ProjectLinks";
 
 const BirdGame = () => {
   return (
-    <MidWrapper>
+    <ProjectMidWrapper>
       <S.ProjectWrapper>
         <S.ProjectBody>
           <S.ProjectImage src={HeaderImage} />
           <div>
             <ProjectTitle text={`Bird Game`} />
+            <TechList
+              fitContent={false}
+              icons={BirdTech}
+              websites={<ProjectLinks github={"https://github.com/felixgrondahl/birdclone"} website={""} />}
+            />
             <h3>Sole Developer</h3>
             <S.ProjectHeaderText>{`A Flappy Bird clone create with PixiJS.`}</S.ProjectHeaderText>
-            <ProjectLinks github={"https://github.com/felixgrondahl/birdclone"} website={""}/>
-            <TechList>{BirdTech}</TechList>
+
+            {/* <div>{BirdTech}</div>
+            </TechList> */}
             <S.ProjectText>
               <span>{`Coming from a background of in game development using Unity I wanted to create a simple web browser game using typescript and PixiJS.`}</span>
               <span>{`In Flappybird you fly through infinitely generating obstacles so I knew I had to build a generator to place the trees at the correct x-offset from eachother and reseting their poisitons when they exit the screen.
@@ -41,7 +47,7 @@ const BirdGame = () => {
           <S.ProjectVideo src={gameplayVideo} itemType="video/mp4" loop autoPlay muted half={false} />
         </S.ProjectBody>
       </S.ProjectWrapper>
-    </MidWrapper>
+    </ProjectMidWrapper>
   );
 };
 

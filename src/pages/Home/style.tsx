@@ -30,6 +30,10 @@ export const Title = styled.h1`
     transform: none;
   }
 
+  @media ${device.mobileS} {
+    letter-spacing: 0.12em;
+  }
+
   span#subtitle {
     display: block;
   }

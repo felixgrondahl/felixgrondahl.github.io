@@ -18,6 +18,10 @@ export const ProjectBody = styled.div`
   width: 80%;
   margin: auto;
 
+  h3 {
+    padding-top: 5px;
+  }
+
   @media ${device.tablet} {
     display: flex;
     flex-direction: column;
@@ -28,10 +32,10 @@ export const ProjectBody = styled.div`
 `;
 
 export const ProjectHeaderText = styled.p`
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.1em;
   letter-spacing: 0.085em;
-  margin: 5px 0px 10px 0px;
+  margin: 5px 0px;
 
   @media ${device.tablet} {
     font-size: 1em;

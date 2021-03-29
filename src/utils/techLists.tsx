@@ -23,7 +23,7 @@ export const pgronGalleryTech = [
   <NodeIcon width="25" height="25" title="NodeJs" />,
   <CssIcon width="25" height="25" title="Css3" />,
   <GraphqlIcon width="25" height="25" title="GraphQL" />,
-  <StyledComponentsIcon width="35" height="35" title="StyledComponents" fill="white" />,
+  <StyledComponentsIcon width="35" height="25" title="StyledComponents" fill="white" />,
 ];
 
 export const pgronShopTech = [

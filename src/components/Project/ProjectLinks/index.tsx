@@ -9,13 +9,13 @@ const ProjectLinks = ({ github, website }: { github: string; website: string }) 
       {github ? (
         <a href={github}>
           <GithubIcon />
-          Github
+          <span>Github</span>
         </a>
       ) : null}
       {website ? (
         <a href={website}>
           <WebIcon />
-          Website
+          <span>Website</span>
         </a>
       ) : null}
     </LinkWrapper>

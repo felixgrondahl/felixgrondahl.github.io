@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "pages/Projects/project-styles";
-import { MidWrapper } from "globalStyles/wrappers";
+import { ProjectMidWrapper } from "globalStyles/wrappers";
 import ProjectTitle from "components/Project/ProjectTitle";
 import HeaderImage from "assets/images/PgronGallery/PgronGalleryHeader.png";
 import MainImage from "assets/images/PgronGallery/PgronGalleryMain.jpg";
@@ -8,20 +8,22 @@ import TechList from "components/TechList";
 import { pgronGalleryTech } from "utils/techLists";
 import ProjectLinks from "components/Project/ProjectLinks";
 
-
 const ProjectPage = () => {
   return (
-    <MidWrapper>
+    <ProjectMidWrapper>
       <S.ProjectWrapper>
         <S.ProjectBody>
           <S.ProjectImage src={HeaderImage} />
           <div>
             <ProjectTitle text={`Peter Grondahl Gallery`} />
+            <TechList
+              fitContent={false}
+              icons={pgronGalleryTech}
+              websites={<ProjectLinks github={""} website={"https://www.pgron.com/"} />}
+            />
             <h3>Sole Developer</h3>
             <S.ProjectHeaderText>{`A minimalistic art gallery page for Peter Gröndahl created with React.`}</S.ProjectHeaderText>
-            <ProjectLinks github={""} website={"https://www.pgron.com/"} />
 
-            <TechList>{pgronGalleryTech}</TechList>
             <S.ProjectText>
               {/* <span>{`an exclusive gallery page for the artist Peter Gröndahl created in React.`}</span> */}
 
@@ -36,7 +38,7 @@ const ProjectPage = () => {
           <S.ProjectImage src={MainImage} />
         </S.ProjectBody>
       </S.ProjectWrapper>
-    </MidWrapper>
+    </ProjectMidWrapper>
   );
 };
 

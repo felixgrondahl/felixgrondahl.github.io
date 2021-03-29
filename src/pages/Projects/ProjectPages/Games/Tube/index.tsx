@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "pages/Projects/project-styles";
-import { MidWrapper } from "globalStyles/wrappers";
+import { ProjectMidWrapper } from "globalStyles/wrappers";
 import ProjectTitle from "components/Project/ProjectTitle";
 import TechList from "components/TechList";
 import { TubeTech } from "utils/techLists";
@@ -13,7 +13,7 @@ import ProjectLinks from "components/Project/ProjectLinks";
 
 const Tube = () => {
   return (
-    <MidWrapper>
+    <ProjectMidWrapper>
       <S.ProjectWrapper>
         <S.ProjectBody>
           <S.VideoContainer>
@@ -22,14 +22,22 @@ const Tube = () => {
 
           <div>
             <ProjectTitle text={`TUBE`} />
+            <TechList
+              fitContent={false}
+              icons={TubeTech}
+              websites={<ProjectLinks github={""} website={"https://helmetbox.itch.io/tube"} />}
+            />
+
             <h3>Programming / Animation</h3>
             <S.ProjectHeaderText>{`Tube is an FPS Horror game where your goal is to get to the end of the generated level, fighting through enemies, and eating donuts along the way.`}</S.ProjectHeaderText>
-            <ProjectLinks github={""} website={"https://helmetbox.itch.io/tube"}/>
-            <TechList>{TubeTech}</TechList>
+
             <S.ProjectText>
               <span>{`TUBE is a game where I wanted to put my knowledge to the test. I knew I wanted to include some kind of procedurally generated levels as well as procedural animation. While I had done both of these types of work separately before, the challenge here was to implement these in a short timeframe of a couple of weeks to fit the scope of the game.`}</span>
-              <span>{`Creating the Enemy animations I knew that using a Machine Learning solution would probably take too much time to both setup and train. So instead I went with a simpler approach of using an animation reference the rigidbodies would then try to copy. This was done using `}
-<a href="https://en.wikipedia.org/wiki/PID_controller">P(I)D-Controllers</a> {` on all the joints to calculate how much torque to apply to reach its respective target angle of the reference.`}</span>
+              <span>
+                {`Creating the Enemy animations I knew that using a Machine Learning solution would probably take too much time to both setup and train. So instead I went with a simpler approach of using an animation reference the rigidbodies would then try to copy. This was done using `}
+                <a href="https://en.wikipedia.org/wiki/PID_controller">P(I)D-Controllers</a>{" "}
+                {` on all the joints to calculate how much torque to apply to reach its respective target angle of the reference.`}
+              </span>
             </S.ProjectText>
           </div>
           <div>
@@ -42,7 +50,7 @@ const Tube = () => {
           </div>
         </S.ProjectBody>
       </S.ProjectWrapper>
-    </MidWrapper>
+    </ProjectMidWrapper>
   );
 };
 
