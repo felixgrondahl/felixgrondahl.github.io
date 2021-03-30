@@ -56,6 +56,7 @@ export const ProjectImage = styled.img`
   display: inline-block;
   border-radius: 5px;
   object-fit: cover;
+  cursor: pointer;
 `;
 
 export const ProjectHalfImage = styled(ProjectImage)`
@@ -74,6 +75,8 @@ export const ProjectVideo = styled.video<{ half: boolean }>`
   object-fit: contain;
   display: inline-block;
   border-radius: 5px;
+
+  cursor: pointer;
 `;
 
 export const VideoContainer = styled.div`

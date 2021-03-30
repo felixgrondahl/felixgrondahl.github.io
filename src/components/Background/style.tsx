@@ -8,8 +8,10 @@ export const Wrapper = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: -1;
+  z-index: -2;
   background-color: #1d1741;
+
+  pointer-events: none;
 
   @media ${device.tablet} {
     width: 240%;

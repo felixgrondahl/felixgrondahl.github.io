@@ -32,9 +32,11 @@ function App() {
       <GlobalStyle />
 
       {/* <Background grow={location.pathname === "/projects"} /> */}
+      <Footer projects={matchPath(location.pathname, { path: ["/projects", "/about"] }) ? true : false} />
 
       {transition.map(({ item: location, props, key }) => (
         <AnimatedRoutes key={key} style={props}>
+                
           <Switch location={location}>
             <Route path="/" exact component={Home} />
             <Route path="/projects/websites" exact component={Websites} />
@@ -54,6 +56,7 @@ function App() {
         </AnimatedRoutes>
       ))}
       <Nav projects={matchPath(location.pathname, "/projects") ? true : false} />
+      
       {/* The background ball's scale and color needs to be set based on what path we are in. */}
       <Background
         scale={
@@ -75,7 +78,7 @@ function App() {
             : "#2FC4F3"
         }
       />
-      <Footer projects={matchPath(location.pathname, {path: ["/projects", "/about"]}) ? true : false}/>
+
     </div>
   );
 }

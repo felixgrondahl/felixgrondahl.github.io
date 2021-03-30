@@ -6,11 +6,9 @@ import SidePanel from "./SidePanel";
 import { StyledNavLink } from "globalStyles/link-styles";
 import { matchPath } from "react-router";
 import { useLocation } from "react-router-dom";
-// import { ReactComponent as MobileMenu } from "assets/icons/mobile-menu.svg";
 
 const Nav = ({ projects }: { projects: boolean }) => {
   const location = useLocation();
-  // console.log(location.pathname);
   const showProjectsSpring = useSpring({ width: projects ? "300px" : "0px" });
   return (
     <>

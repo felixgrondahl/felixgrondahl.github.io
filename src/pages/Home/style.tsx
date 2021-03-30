@@ -3,10 +3,14 @@ import { device } from "globalStyles/breakpoints";
 import { StyledNavLink } from "globalStyles/link-styles";
 
 export const Wrapper = styled.div`
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  pointer-events: auto;
+  top: 39%;
+  left: 50%;
 
   @media ${device.tablet} {
+    width: 100%;
+    position: initial;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -19,8 +23,6 @@ export const Wrapper = styled.div`
 export const Title = styled.h1`
   position: relative;
   text-align: center;
-  top: 39%;
-  left: 50%;
   transform: translate(-50%, -50%);
   letter-spacing: 0.25em;
 
@@ -55,7 +57,6 @@ export const MobileLinkWrapper = styled.div`
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
-  /* top: 20%; */
   height: 200px;
 
   display: none;
@@ -73,5 +74,4 @@ export const MobileLink = styled(StyledNavLink)`
   padding: 10px 0px;
   width: 90%;
   text-align: center;
-  /* background-color: rgba(0, 0, 0, 0.15); */
 `;

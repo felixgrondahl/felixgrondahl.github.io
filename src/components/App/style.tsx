@@ -8,6 +8,7 @@ export const AnimatedRoutes = styled(animated.div)`
   height: 100vh;
   will-change: opacity;
   overflow: hidden;
+  pointer-events: none;
 
   @media ${device.tablet} {
     overflow-y: visible;

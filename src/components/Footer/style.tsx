@@ -11,6 +11,8 @@ export const Wrapper = styled.footer<FooterProps>`
   position: absolute;
   bottom: 0;
 
+  pointer-events: auto;
+
   @media ${device.tablet} {
     display: ${props => props.mobileShow ? "none" : "initial"}
   }

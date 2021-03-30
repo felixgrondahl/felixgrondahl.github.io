@@ -4,12 +4,13 @@ import { animated } from "react-spring";
 import { device } from "globalStyles/breakpoints";
 
 export const NavWrapper = styled.nav`
-  position: relative;
+  /* position: relative; */
+  /* position: fixed; */
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  width: 750px;
+  width: 100%;
   margin: auto;
   padding-top: 40px;
   z-index: 999;
