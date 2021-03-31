@@ -50,7 +50,7 @@ const AboutMe = () => {
             <LeftColumn>
               <div>
                 <p>
-                  <span>{`Passionate self-taught programmer and gamer that just can’t get enough of creating games, apps, and learning new things.`}</span>
+                  <span>{`Passionate self-taught Frontend web developer that just can’t get enough of learning and improving.`}</span>
                   <span>{`Whether it’s a website, 2D platformer, full 3D experience, a mobile app or procedural animation utilizing
               machine learning, I’m always up for the challenge.`}</span>
                 </p>
