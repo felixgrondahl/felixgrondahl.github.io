@@ -11,7 +11,7 @@ const SidePanel = () => {
 
   return (
     <Wrapper>
-      <ShowPanelButton className={`${open ? "buttonOpen" : "buttonClosed"}`} onClick={() => setOpen((v) => !v)}>
+      <ShowPanelButton className={`${open ? "buttonOpen" : "buttonClosed"}`} onClick={() => setOpen((v) => !v)} aria-label="Show navigation panel">
         <MobileMenu />
       </ShowPanelButton>
 
