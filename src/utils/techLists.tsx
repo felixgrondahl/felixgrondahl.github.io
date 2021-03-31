@@ -55,3 +55,22 @@ export const ProceduralAnimTech = [
   <CSharpIcon width="25" height="25" title="CSharp" />,
   <VSIcon width="25" height="25" title="Visual Studio" />,
 ];
+
+export const AllTech = [
+  <HtmlIcon width="25" height="25" title="Html5" />,
+  <JsIcon width="25" height="25" title="Javascript" />,
+  <TSIcon width="25" height="25" title="Typescript" />,
+  <NodeIcon width="25" height="25" title="NodeJs" />,
+  <ReactIcon width="25" height="25" title="React" />,
+  <NextIcon width="43" height="25" title="NextJs" />,
+  <CssIcon width="25" height="25" title="Css3" />,
+  <StyledComponentsIcon width="35" height="25" title="StyledComponents" fill="white" />,
+  <SassIcon width="25" height="25" title="Sass" />,
+  <PixiJsIcon width="43" height="25" title="PIXIJS" />,
+  <GraphqlIcon width="25" height="25" title="GraphQL" />,
+  <UnityIcon width="25" height="25" title="Unity" />,
+  <CSharpIcon width="25" height="25" title="CSharp" />,
+  <VSIcon width="25" height="25" title="Visual Studio" />,
+  <BlenderIcon width="25" height="25" title="Blender" />,
+  <PSIcon width="25" height="25" title="Photoshop" />,
+];
