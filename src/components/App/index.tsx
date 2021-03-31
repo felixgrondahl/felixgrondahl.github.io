@@ -18,6 +18,7 @@ import Tube from "pages/Projects/ProjectPages/Games/Tube";
 import BirdGame from "pages/Projects/ProjectPages/Games/BirdGame";
 import PgronShop from "pages/Projects/ProjectPages/Websites/PgronShop";
 import { Helmet } from "react-helmet";
+import OGImage from "assets/images/ogimage.jpg";
 
 function App() {
   const location = useLocation();
@@ -39,7 +40,7 @@ function App() {
         <meta property="og:url" content="https://felixgrondahl.github.io" />
         <meta property="og:title" content="Felix Gröndahl Portfolio" />
         <meta property="og:description" content="Felix Gröndahl - frontend web developer." />
-        <meta property="og:image" content="assets/images/ogimage.jpg" />
+        <meta property="og:image" content={OGImage} />
         <meta property="og:image:alt" content="Felix Gröndahl Portfolio og-image" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
