@@ -10,6 +10,7 @@ import { pgronShopTech } from "utils/techLists";
 import ProjectLinks from "components/Project/ProjectLinks";
 import MediaModal from "components/ImageModal";
 import { ModalProvider } from "styled-react-modal";
+import { Helmet } from "react-helmet";
 
 const PgronShop = () => {
   const [showModal, setShowModal] = useState({ show: false, media: "" });
@@ -21,6 +22,16 @@ const PgronShop = () => {
   return (
     <>
       <ProjectMidWrapper>
+
+      <Helmet>
+        <title>Felix Gröndahl | PGRON SHOP</title>
+        <meta name="description" content="Felix Gröndahl frontend web developer. PGRON SHOP is a lightweight serverside rendered webshop created with NextJs." />
+        <link rel="canonical" href="https://felixgrondahl.github.io/projects/websites/pgronshop" />
+        <meta property="og:url" content="https://felixgrondahl.github.io/projects/websites/pgronshop" />
+        <meta property="og:title" content="Felix Gröndahl Portfolio | Projects | PGRON SHOP" />
+        <meta property="og:description" content="Felix Gröndahl - PGRON SHOP website." />
+      </Helmet>
+
         <S.ProjectWrapper>
           <S.ProjectBody>
             <S.ProjectImage onClick={() => OpenMediaModal(HeaderImage)} src={HeaderImage} />

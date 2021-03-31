@@ -4,6 +4,7 @@ import { Wrapper, Title, MobileLinkWrapper, MobileLink } from "./style";
 const Home = () => {
   return (
     <Wrapper>
+
       <Title>
         Felix Gröndahl
         <span id="subtitle">

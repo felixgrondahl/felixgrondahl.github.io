@@ -12,6 +12,7 @@ import MapGenVideo from "assets/images/Tube/mapgen.mp4";
 import ProjectLinks from "components/Project/ProjectLinks";
 import { ModalProvider } from "styled-react-modal";
 import MediaModal from "components/ImageModal";
+import { Helmet } from "react-helmet";
 
 const Tube = () => {
   const [showModal, setShowModal] = useState({ show: false, media: "" });
@@ -23,6 +24,16 @@ const Tube = () => {
   return (
     <>
       <ProjectMidWrapper>
+        
+      <Helmet>
+        <title>Felix Gröndahl | Tube</title>
+        <meta name="description" content="Felix Gröndahl frontend web developer. Tube is an FPS Horror game where your goal is to get to the end of the generated level, fighting through enemies, and eating donuts along the way." />
+        <link rel="canonical" href="https://felixgrondahl.github.io/projects/games/tube" />
+        <meta property="og:url" content="https://felixgrondahl.github.io/projects/games/tube" />
+        <meta property="og:title" content="Felix Gröndahl Portfolio | Projects | Tube" />
+        <meta property="og:description" content="Felix Gröndahl - Tube game project." />
+      </Helmet>
+
         <S.ProjectWrapper>
           <S.ProjectBody>
             <S.VideoContainer>

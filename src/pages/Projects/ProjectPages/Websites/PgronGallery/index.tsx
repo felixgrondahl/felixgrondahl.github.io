@@ -9,6 +9,7 @@ import { pgronGalleryTech } from "utils/techLists";
 import ProjectLinks from "components/Project/ProjectLinks";
 import MediaModal from "components/ImageModal";
 import { ModalProvider } from "styled-react-modal";
+import { Helmet } from "react-helmet";
 
 const ProjectPage = () => {
   const [showModal, setShowModal] = useState({ show: false, media: "" });
@@ -20,6 +21,18 @@ const ProjectPage = () => {
   return (
     <>
       <ProjectMidWrapper>
+        <Helmet>
+          <title>Felix Gröndahl | Peter Grondahl Gallery</title>
+          <meta
+            name="description"
+            content="Felix Gröndahl frontend web developer. A minimalistic art gallery page for Peter Gröndahl created with React."
+          />
+          <link rel="canonical" href="https://felixgrondahl.github.io/projects/websites/pgrongallery" />
+          <meta property="og:url" content="https://felixgrondahl.github.io/projects/websites/pgronshop" />
+          <meta property="og:title" content="Felix Gröndahl Portfolio | Projects | Peter Grondahl Gallery" />
+          <meta property="og:description" content="Felix Gröndahl - Peter Grondahl Gallery website." />
+        </Helmet>
+
         <S.ProjectWrapper>
           <S.ProjectBody>
             <S.ProjectImage onClick={() => OpenMediaModal(HeaderImage)} src={HeaderImage} />

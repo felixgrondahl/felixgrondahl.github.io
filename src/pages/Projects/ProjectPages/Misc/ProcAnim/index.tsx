@@ -8,6 +8,7 @@ import TechList from "components/TechList";
 import { ProceduralAnimTech } from "utils/techLists";
 import MediaModal from "components/ImageModal";
 import { ModalProvider } from "styled-react-modal";
+import { Helmet } from "react-helmet";
 
 const ProcAnim = () => {
   const [showModal, setShowModal] = useState({ show: false, media: "" });
@@ -19,9 +20,29 @@ const ProcAnim = () => {
   return (
     <>
       <ProjectMidWrapper>
+        <Helmet>
+          <title>Felix Gröndahl | Procedural Animation</title>
+          <meta
+            name="description"
+            content="Felix Gröndahl frontend web developer. Using Unity and machine learning to generate a self balancing walking biped."
+          />
+          <link rel="canonical" href="https://felixgrondahl.github.io/projects/misc/proceduralanimation" />
+          <meta property="og:url" content="https://felixgrondahl.github.io/projects/misc/proceduralanimation" />
+          <meta property="og:title" content="Felix Gröndahl Portfolio | Projects | Procedural Animation" />
+          <meta property="og:description" content="Felix Gröndahl - Procedural Animation." />
+        </Helmet>
+
         <S.ProjectWrapper>
           <S.ProjectBody>
-            <S.ProjectVideo onClick={() => OpenMediaModal(HeaderVideo)} src={HeaderVideo} itemType="video/mp4" loop autoPlay muted half={false} />
+            <S.ProjectVideo
+              onClick={() => OpenMediaModal(HeaderVideo)}
+              src={HeaderVideo}
+              itemType="video/mp4"
+              loop
+              autoPlay
+              muted
+              half={false}
+            />
             <div>
               <ProjectTitle text={`Procedural Animation`} />
               <TechList fitContent={true} icons={ProceduralAnimTech} websites={<React.Fragment />} />
@@ -42,7 +63,15 @@ const ProcAnim = () => {
               {`While I learned a lot about procedural animation and Machine Learning working on this project, I also learned a lot about Unity's physics and creating stable rigidbody setups.`}
             </S.ProjectText>
             <S.VideoContainer style={{ height: "300px", backgroundColor: "rgba(0, 0, 0, 0.1)", borderRadius: "5px" }}>
-              <S.ProjectVideo onClick={() => OpenMediaModal(MainVideo)} src={MainVideo} itemType="video/mp4" loop autoPlay muted half={false} />
+              <S.ProjectVideo
+                onClick={() => OpenMediaModal(MainVideo)}
+                src={MainVideo}
+                itemType="video/mp4"
+                loop
+                autoPlay
+                muted
+                half={false}
+              />
             </S.VideoContainer>
           </S.ProjectBody>
         </S.ProjectWrapper>

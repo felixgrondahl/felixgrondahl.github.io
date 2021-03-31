@@ -17,6 +17,7 @@ import ProcAnim from "pages/Projects/ProjectPages/Misc/ProcAnim";
 import Tube from "pages/Projects/ProjectPages/Games/Tube";
 import BirdGame from "pages/Projects/ProjectPages/Games/BirdGame";
 import PgronShop from "pages/Projects/ProjectPages/Websites/PgronShop";
+import { Helmet } from "react-helmet";
 
 function App() {
   const location = useLocation();
@@ -29,6 +30,21 @@ function App() {
 
   return (
     <div className="App">
+      <Helmet>
+        <title>Felix Gröndahl | Portfolio</title>
+        <meta name="description" content="Felix Gröndahl frontend web developer portfolio." />
+        <link rel="canonical" href="https://felixgrondahl.github.io" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Felix Gröndahl Portfolio" />
+        <meta property="og:url" content="https://felixgrondahl.github.io" />
+        <meta property="og:title" content="Felix Gröndahl Portfolio" />
+        <meta property="og:description" content="Felix Gröndahl - frontend web developer." />
+        <meta property="og:image" content="assets/images/ogimage.jpg" />
+        <meta property="og:image:alt" content="Felix Gröndahl Portfolio og-image" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+      </Helmet>
+
       <GlobalStyle />
 
       {/* <Background grow={location.pathname === "/projects"} /> */}

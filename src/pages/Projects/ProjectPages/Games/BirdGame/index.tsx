@@ -9,6 +9,7 @@ import { BirdTech } from "utils/techLists";
 import ProjectLinks from "components/Project/ProjectLinks";
 import MediaModal from "components/ImageModal";
 import { ModalProvider } from "styled-react-modal";
+import { Helmet } from "react-helmet";
 
 const BirdGame = () => {
   const [showModal, setShowModal] = useState({ show: false, media: "" });
@@ -20,6 +21,16 @@ const BirdGame = () => {
   return (
     <>
       <ProjectMidWrapper>
+     
+      <Helmet>
+        <title>Felix Gröndahl | Flappy Bird Clone</title>
+        <meta name="description" content="Felix Gröndahl frontend web developer. A Flappy Bird clone create with PixiJS." />
+        <link rel="canonical" href="https://felixgrondahl.github.io/projects/games/bird" />
+        <meta property="og:url" content="https://felixgrondahl.github.io/projects/games/bird" />
+        <meta property="og:title" content="Felix Gröndahl Portfolio | Projects | Flappy Bird clone" />
+        <meta property="og:description" content="Felix Gröndahl - Flappy Bird clone game project." />
+      </Helmet>
+
         <S.ProjectWrapper>
           <S.ProjectBody>
             <S.ProjectImage onClick={() => OpenMediaModal(HeaderImage)} src={HeaderImage} />
