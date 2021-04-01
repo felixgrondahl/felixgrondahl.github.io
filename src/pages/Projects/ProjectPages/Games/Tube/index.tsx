@@ -55,7 +55,7 @@ const Tube = () => {
                 <span>{`TUBE is a game where I wanted to put my knowledge to the test. I knew I wanted to include some kind of procedurally generated levels as well as procedural animation. While I had done both of these types of work separately before, the challenge here was to implement these in a short timeframe of a couple of weeks to fit the scope of the game.`}</span>
                 <span>
                   {`Creating the Enemy animations I knew that using a Machine Learning solution would probably take too much time to both setup and train. So instead I went with a simpler approach of using an animation reference the rigidbodies would then try to copy. This was done using `}
-                  <a href="https://en.wikipedia.org/wiki/PID_controller">P(I)D-Controllers</a>{" "}
+                  <a href="https://en.wikipedia.org/wiki/PID_controller" target="_blank" rel="noopener noreferrer">P(I)D-Controllers</a>{" "}
                   {` on all the joints to calculate how much torque to apply to reach its respective target angle of the reference.`}
                 </span>
               </S.ProjectText>

@@ -55,7 +55,7 @@ const ProcAnim = () => {
             <S.ProjectText>
               <span>
                 {`After running all the scalars of the model through an `}{" "}
-                <a href="https://en.wikipedia.org/wiki/Evolutionary_algorithm">
+                <a href="https://en.wikipedia.org/wiki/Evolutionary_algorithm" target="_blank" rel="noopener noreferrer">
                   Evolutionary Machine Learning algorithm
                 </a>{" "}
                 {` the movement becomes much more natural. It also corrects foot placement based on its center of mass velocity.`}
