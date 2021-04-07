@@ -1,5 +1,5 @@
 import React from "react";
-import MeImage from "assets/images/headshotsmall.png";
+import MeImage from "assets/images/Felix_square.jpg";
 import {
   ProfileImg,
   TextWrapper,
