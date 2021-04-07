@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.js": "/static/js/main.6a01c136.chunk.js",
-    "main.js.map": "/static/js/main.6a01c136.chunk.js.map",
+    "main.js": "/static/js/main.a45a4848.chunk.js",
+    "main.js.map": "/static/js/main.a45a4848.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.d0605945.js",
     "runtime-main.js.map": "/static/js/runtime-main.d0605945.js.map",
     "static/js/2.59ff9909.chunk.js": "/static/js/2.59ff9909.chunk.js",
     "static/js/2.59ff9909.chunk.js.map": "/static/js/2.59ff9909.chunk.js.map",
     "index.html": "/index.html",
     "static/js/2.59ff9909.chunk.js.LICENSE.txt": "/static/js/2.59ff9909.chunk.js.LICENSE.txt",
+    "static/media/Felix_square.80211c91.jpg": "/static/media/Felix_square.80211c91.jpg",
     "static/media/PgronGallery.30accfc4.png": "/static/media/PgronGallery.30accfc4.png",
     "static/media/PgronGalleryHeader.fb53cbce.png": "/static/media/PgronGalleryHeader.fb53cbce.png",
     "static/media/PgronGalleryMain.6c8f7bfc.jpg": "/static/media/PgronGalleryMain.6c8f7bfc.jpg",
@@ -23,7 +24,6 @@
     "static/media/globe.de4b379f.svg": "/static/media/globe.de4b379f.svg",
     "static/media/graphql.5673ef9a.svg": "/static/media/graphql.5673ef9a.svg",
     "static/media/header.c9008320.jpg": "/static/media/header.c9008320.jpg",
-    "static/media/headshotsmall.5d307c12.png": "/static/media/headshotsmall.5d307c12.png",
     "static/media/html5-original.c28bc668.svg": "/static/media/html5-original.c28bc668.svg",
     "static/media/iconmonstr-arrow-59.dd96f3c2.svg": "/static/media/iconmonstr-arrow-59.dd96f3c2.svg",
     "static/media/idle.06a451d9.mp4": "/static/media/idle.06a451d9.mp4",
@@ -51,6 +51,6 @@
   "entrypoints": [
     "static/js/runtime-main.d0605945.js",
     "static/js/2.59ff9909.chunk.js",
-    "static/js/main.6a01c136.chunk.js"
+    "static/js/main.a45a4848.chunk.js"
   ]
 }
