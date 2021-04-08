@@ -1,30 +1,16 @@
 import React from "react";
 import MeImage from "assets/images/Felix_square.jpg";
-import {
-  ProfileImg,
-  TextWrapper,
-  MobileHeader,
-  AboutWrapper,
-  LeftColumn,
-  RightColumn,
-  Projects,
-  Skills,
-  Concepts,
-  Header,
-  ContentWrapper,
-  TextList,
-  ListTitle,
-  HeaderTitle
-} from "./style";
+import * as S from "./style";
 import TechList from "components/TechList";
 import { AllTech } from "utils/techLists";
 import { Helmet } from "react-helmet";
+import { ProjectTemplate } from "components/ProjectTemplate";
 
 const AboutMe = () => {
   return (
     <>
-      <MobileHeader>ABOUT ME</MobileHeader>
-      <AboutWrapper>
+      <S.MobileHeader>ABOUT ME</S.MobileHeader>
+      <S.AboutWrapper>
         <Helmet>
           <title>Felix Gröndahl | About Me</title>
           <meta
@@ -37,121 +23,149 @@ const AboutMe = () => {
           <meta property="og:description" content="Felix Gröndahl - About Me." />
         </Helmet>
 
-        <ContentWrapper>
-          <Header>
-            <ProfileImg style={{ backgroundImage: `url(${MeImage})` }} />
-            <HeaderTitle>
+        <S.ContentWrapper>
+          <S.Header>
+            <S.ProfileImg style={{ backgroundImage: `url(${MeImage})` }} />
+            <S.HeaderTitle>
               <h1>FELIX GRÖNDAHL</h1>
               <TechList icons={AllTech} websites={null} fitContent={true} />
-            </HeaderTitle>
-          </Header>
+            </S.HeaderTitle>
+          </S.Header>
 
-          <TextWrapper>
-            <LeftColumn>
-              <div>
+          <S.TextWrapper>
+            <S.LeftColumn>
+              <S.SectionWrapper>
+                <S.ListTitle>ABOUT ME</S.ListTitle>
                 <p>
-                  <span>{`Passionate self-taught Frontend web developer that just can’t get enough of learning and improving.`}</span>
-                  <span>{`Whether it’s a website, 2D platformer, full 3D experience, a mobile app or procedural animation utilizing
+                  <span className="textBlock">{`Passionate Front-end developer that just can’t get enough of learning and improving.`}</span>
+                  <span className="textBlock">{`With 5 years experience in game development and 1 year in Front-end web development I feel that I have a very wide grasp of 
+                  "Front-end" that many others might not have.`}</span>
+                  <span className="textBlock">{`Whether it’s a website, casino game, full 3D experience, a mobile app or procedural animation utilizing
               machine learning, I’m always up for the challenge.`}</span>
                 </p>
-              </div>
-              <Projects>
-                <ListTitle>PROJECTS</ListTitle>
-                <TextList>
-                  <li>
-                    <p>{`2021
-                      PGRON SHOP | WEB
-                      HTML SASS TS React NextJS`}</p>
-                  </li>
-                  <li>
-                    <p>{`2020
-                      Peter Grondahl Gallery | WEB
-                      HTML CSS JS React`}</p>
-                  </li>
-                  <li>
-                    <p>{`2019
-                      Tube | PC
-                      C# Unity`}</p>
-                  </li>
-                  <li>
-                    <p>{`2015
-                      JETMAN | Android / IOS
-                      C# Unity`}</p>
-                  </li>
-                </TextList>
-              </Projects>
-            </LeftColumn>
+              </S.SectionWrapper>
+              <S.Projects>
+                <S.SectionWrapper>
+                  <S.ListTitle>PROJECTS</S.ListTitle>
+                  <S.TextList>
+                    <li>
+                      <ProjectTemplate
+                        year="2021"
+                        projTitle="Peter Grondahl Gallery | WEB"
+                        role="Sole Developer"
+                        tech="HTML CSS JS React"
+                      />
+                    </li>
+                    <li>
+                      <ProjectTemplate
+                        year="2021"
+                        projTitle="PGRON SHOP | WEB"
+                        role="Sole Developer"
+                        tech="HTML SASS TS React NextJS"
+                      />
+                    </li>
+                    <li>
+                      <ProjectTemplate
+                        year="2019"
+                        projTitle="Larn Wick | Bored Pixel Jam 5 | PC"
+                        role="Programmer"
+                        tech="C# Unity"
+                      />
+                    </li>
+                    <li>
+                      <ProjectTemplate
+                        year="2019"
+                        projTitle="Tube | PC"
+                        role="Programmer | Animation | Tech Animator"
+                        tech="C# Unity"
+                      />
+                    </li>
+                    <li>
+                      <ProjectTemplate
+                        year="2015"
+                        projTitle="JETMAN | Android / IOS"
+                        role="Programmer"
+                        tech="C# Unity"
+                      />
+                    </li>
+                  </S.TextList>
+                </S.SectionWrapper>
+              </S.Projects>
+            </S.LeftColumn>
 
-            <RightColumn>
-              <Skills>
-                <div>
-                  <ListTitle>LANGUAGES</ListTitle>
-                  <TextList>
-                    <li>
-                      <p>HTML - 4/5</p>
-                    </li>
-                    <li>
-                      <p>CSS - 4/5</p>
-                    </li>
-                    <li>
-                      <p>JS - 4/5</p>
-                    </li>
-                    <li>
-                      <p>TS - 4/5</p>
-                    </li>
+            <S.RightColumn>
+              <S.SectionWrapper>
+                <S.Skills>
+                  <div>
+                    <S.ListTitle>LANGUAGES</S.ListTitle>
+                    <S.TextList>
+                      <li>
+                        <p>HTML - 4/5</p>
+                      </li>
+                      <li>
+                        <p>CSS - 4/5</p>
+                      </li>
+                      <li>
+                        <p>JS - 4/5</p>
+                      </li>
+                      <li>
+                        <p>TS - 4/5</p>
+                      </li>
 
-                    <li>
-                      <p>C# - 4/5</p>
-                    </li>
-                    <li>
-                      <p>Python - 3/5</p>
-                    </li>
-                    <li>
-                      <p>C - 2/5</p>
-                    </li>
-                    <li>
-                      <p>C++ - 2/5</p>
-                    </li>
-                  </TextList>
-                </div>
+                      <li>
+                        <p>C# - 4/5</p>
+                      </li>
+                      <li>
+                        <p>Python - 3/5</p>
+                      </li>
+                      <li>
+                        <p>C - 2/5</p>
+                      </li>
+                      <li>
+                        <p>C++ - 2/5</p>
+                      </li>
+                    </S.TextList>
+                  </div>
 
-                <div>
-                  <ListTitle>FRAMEWORKS</ListTitle>
-                  <TextList>
+                  <div>
+                    <S.ListTitle>FRAMEWORKS</S.ListTitle>
+                    <S.TextList>
+                      <li>
+                        <p>React - 4/5</p>
+                      </li>
+                      <li>
+                        <p>PixiJS - 3/5</p>
+                      </li>
+                      <li>
+                        <p>NextJS - 3/5</p>
+                      </li>
+                    </S.TextList>
+                  </div>
+                </S.Skills>
+              </S.SectionWrapper>
+              <S.SectionWrapper>
+                <S.Concepts>
+                  <S.ListTitle>CONCEPTS</S.ListTitle>
+                  <S.TextList>
                     <li>
-                      <p>React - 4/5</p>
+                      <p>Clear understanding of OOP</p>
                     </li>
                     <li>
-                      <p>PixiJS - 3/5</p>
+                      <p>
+                        Clear understanding of design patterns such as Dependency Injection Pattern, Component Pattern,
+                        MVC Pattern, and Factory Pattern.
+                      </p>
                     </li>
                     <li>
-                      <p>NextJS - 3/5</p>
+                      <p>Intermediate knowledge in Math and Physics</p>
                     </li>
-                  </TextList>
-                </div>
-              </Skills>
-
-              <Concepts>
-                <ListTitle>CONCEPTS</ListTitle>
-                <TextList>
-                  <li>
-                    <p>Clear understanding of OOP</p>
-                  </li>
-                  <li>
-                    <p>
-                      Clear understanding of design patterns such as Dependency Injection Pattern, Component Pattern,
-                      MVC Pattern, and Factory Pattern.
-                    </p>
-                  </li>
-                  <li>
-                    <p>Intermediate knowledge in Math and Physics</p>
-                  </li>
-                </TextList>
-              </Concepts>
-            </RightColumn>
-          </TextWrapper>
-        </ContentWrapper>
-      </AboutWrapper>
+                  </S.TextList>
+                </S.Concepts>
+              </S.SectionWrapper>
+            </S.RightColumn>
+          </S.TextWrapper>
+        </S.ContentWrapper>
+      </S.AboutWrapper>
     </>
   );
 };

@@ -12,7 +12,6 @@ export const ContentWrapper = styled.div`
 
   @media ${device.tablet} {
     width: 90%;
-    /* margin: auto; */
   }
 `;
 
@@ -35,7 +34,6 @@ export const ProfileImg = styled.div`
   height: 250px;
   background-size: cover;
   border-radius: 10px;
-  /* margin: auto; */
 
   @media ${device.tablet} {
     width: 130px;
@@ -44,13 +42,13 @@ export const ProfileImg = styled.div`
 `;
 
 export const TextWrapper = styled.div`
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 70px;
   padding-top: 30px;
-  /* margin: auto; */
+  margin: auto;
 
   @media ${device.tablet} {
     width: 90%;
@@ -59,27 +57,33 @@ export const TextWrapper = styled.div`
   }
 
   p {
-    line-height: 1.3em;
-    font-size: 1.1em;
+    line-height: 1.1em;
+    letter-spacing: 0.11em;
+    font-size: 1em;
+
     span {
       display: block;
-      margin-bottom: 20px;
+    }
+
+    span.textBlock {
+      margin-bottom: 1em;
     }
   }
+`;
+
+export const SectionWrapper = styled.div`
+  border-bottom: 1px solid rgba(255, 255,255, 0.3);
+  margin-bottom: 15px;
 `;
 
 export const Header = styled.header`
   display: flex;
   flex-wrap: nowrap;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  gap: 10%;
+  gap: 5px;
   width: 100%;
   align-items: center;
-
-  @media ${device.tablet} {
-    flex-direction: column;
-  }
 `;
 
 export const HeaderTitle = styled.div`
@@ -103,15 +107,15 @@ export const HeaderTitle = styled.div`
 `;
 
 export const LeftColumn = styled.div`
-  width: 50%;
-  
+  width: 60%;
+
   @media ${device.tablet} {
     width: 100%;
   }
 `;
 
 export const RightColumn = styled.div`
-  width: 50%;
+  width: 40%;
 
   @media ${device.tablet} {
     width: 100%;
@@ -119,9 +123,6 @@ export const RightColumn = styled.div`
 `;
 
 export const Projects = styled.div`
-  p {
-    white-space: pre-line;
-  }
 `;
 
 export const ListTitle = styled.p`
