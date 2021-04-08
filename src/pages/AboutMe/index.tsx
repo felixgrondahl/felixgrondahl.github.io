@@ -38,10 +38,8 @@ const AboutMe = () => {
                 <S.ListTitle>ABOUT ME</S.ListTitle>
                 <p>
                   <span className="textBlock">{`Passionate Front-end developer that just can’t get enough of learning and improving.`}</span>
-                  <span className="textBlock">{`With 5 years experience in game development and 1 year in Front-end web development I feel that I have a very wide grasp of 
-                  "Front-end" that many others might not have.`}</span>
-                  <span className="textBlock">{`Whether it’s a website, casino game, full 3D experience, a mobile app or procedural animation utilizing
-              machine learning, I’m always up for the challenge.`}</span>
+                  <span className="textBlock">{`With 5 years of experience in game development and 1 year in Front-end web development, I feel that I have a wide grasp of "Front-end" that many others might not have.`}</span>
+                  <span className="textBlock">{`Whether it’s a website, casino game, full 3D experience, a mobile app, or procedural animation utilizing machine learning, I’m always up for the challenge.`}</span>
                 </p>
               </S.SectionWrapper>
               <S.Projects>
