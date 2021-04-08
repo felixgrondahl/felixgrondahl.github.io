@@ -53,6 +53,7 @@ export const ProjectText = styled.p`
 export const ProjectImage = styled.img`
   width: 100%;
   height: 100%;
+  max-height: 500px;
   display: inline-block;
   border-radius: 5px;
   object-fit: cover;

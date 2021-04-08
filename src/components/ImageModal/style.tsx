@@ -10,8 +10,8 @@ export const StyledModal = Modal.styled`
 `;
 
 export const ModalImg = styled.img`
-  max-width: 95vw;
-  max-height: 95vh;
+  max-width: 97vw;
+  max-height: 97vh;
   position: relative;
   top: 50%;
   left: 50%;
